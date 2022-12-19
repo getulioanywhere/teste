@@ -1,0 +1,12 @@
+.transform-transition {
+    transition: transform .2s ease-in-out .1s;
+}
+.ascend-on-hover:hover {
+    transform: translateY(-3px);
+}
+.right-on-hover:hover {
+    transform: translateX(5px);
+}
+.scale-on-hover:hover {
+    transform: scale(1.01);
+}

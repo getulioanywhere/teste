@@ -1,0 +1,13 @@
+{
+    "name": "MenuSystem",
+    "alias": "menusystem",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\MenuSystem\\Providers\\MenuSystemServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

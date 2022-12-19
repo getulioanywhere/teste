@@ -1,0 +1,48 @@
+:root {
+
+    --main-color: #2b5e85;
+    --sec-color: #cddce9;
+    --thd-color: '';
+    --main-dark-color: #1b4261;
+    --main-light-color: #ececec;
+    --main-red-color: rgb(168, 24, 24);
+
+    --main-gradient: radial-gradient(white 40%, transparent), linear-gradient(to top, white, transparent 40%), var(--main-light-color);
+    --main-gradient-inverted: radial-gradient(white 40%, transparent), linear-gradient(to bottom, white, transparent 40%), var(--main-light-color);
+    --darker-gradient: radial-gradient(#fffb 40%, transparent), linear-gradient(to top, #fffb, transparent 40%), #ddd;
+
+    --title-font: '';
+    --body-font: '';
+
+}
+
+.bg-main {
+    background-color: var(--main-color);
+}
+.bg-main-red {
+    background-color: var(--main-red-color);
+}
+.bg-main-light {
+    background-color: var(--main-light-color);
+}
+.bg-main-gradient {
+    background: var(--main-gradient);
+}
+.bg-main-gradient-inverted {
+    background: var(--main-gradient-inverted);
+}
+.color-main {
+    color: var(--main-color);
+}
+.color-main-dark {
+    color: var(--main-dark-color);
+}
+.color-main-red {
+    color: var(--main-red-color);
+}
+.color-main-light {
+    color: var(--main-light-color);
+}
+.color-sec {
+    color: var(--sec-color);
+}

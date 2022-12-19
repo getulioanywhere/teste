@@ -1,0 +1,13 @@
+{
+    "name": "Lgpd",
+    "alias": "lgpd",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Lgpd\\Providers\\LgpdServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

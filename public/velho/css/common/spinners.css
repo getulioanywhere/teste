@@ -1,0 +1,238 @@
+@import url(./variables.css);
+
+:root {
+    --bg-color: #fff;
+    --spinner-color: var(--main-color);
+}
+
+.spinner-main {
+    --spinner-color: var(--main-color);
+}
+.spinner-light {
+    --spinner-color: var(--main-light-color);
+}
+.spinner-white {
+    --spinner-color: white;
+}
+
+.spinner-container {
+  height: 4em;
+  max-height: 4em;
+  text-align: center;
+}
+
+/*******************************************************************/
+/*******     https://projects.lukehaas.me/css-loaders/     *********/
+/*******************************************************************/
+/*******************************************************************/
+.spinner1,
+.spinner1:before,
+.spinner1:after {
+  background: var(--spinner-color);
+  -webkit-animation: spin1 1s infinite ease-in-out;
+  animation: spin1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+.spinner1 {
+  color: var(--spinner-color);
+  text-indent: -9999em;
+  margin: 88px auto;
+  position: relative;
+  font-size: 11px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.spinner1:before,
+.spinner1:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+.spinner1:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.spinner1:after {
+  left: 1.5em;
+}
+@-webkit-keyframes spin1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes spin1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+/*******************************************************************/
+.spinner2,
+.spinner2:before,
+.spinner2:after {
+  border-radius: 50%;
+}
+.spinner2 {
+  color: var(--spinner-color);
+  font-size: 11px;
+  text-indent: -99999em;
+  margin: 55px auto;
+  position: relative;
+  width: 10em;
+  height: 10em;
+  box-shadow: inset 0 0 0 1em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.spinner2:before,
+.spinner2:after {
+  position: absolute;
+  content: '';
+}
+.spinner2:before {
+  width: 5.2em;
+  height: 10.2em;
+  background: var(--bg-color);
+  border-radius: 10.2em 0 0 10.2em;
+  top: -0.1em;
+  left: -0.1em;
+  -webkit-transform-origin: 5.1em 5.1em;
+  transform-origin: 5.1em 5.1em;
+  -webkit-animation: spin2 2s infinite ease 1.5s;
+  animation: spin2 2s infinite ease 1.5s;
+}
+.spinner2:after {
+  width: 5.2em;
+  height: 10.2em;
+  background: var(--bg-color);
+  border-radius: 0 10.2em 10.2em 0;
+  top: -0.1em;
+  left: 4.9em;
+  -webkit-transform-origin: 0.1em 5.1em;
+  transform-origin: 0.1em 5.1em;
+  -webkit-animation: spin2 2s infinite ease;
+  animation: spin2 2s infinite ease;
+}
+@-webkit-keyframes spin2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/*******************************************************************/
+.spinner3 {
+    font-size: 10px;
+    margin: 50px auto;
+    text-indent: -9999em;
+    width: 11em;
+    height: 11em;
+    border-radius: 50%;
+    background: var(--spinner-color);
+    background: -moz-linear-gradient(
+        left,
+        var(--spinner-color) 10%,
+        rgba(255, 255, 255, 0) 42%
+    );
+    background: -webkit-linear-gradient(
+        left,
+        var(--spinner-color) 10%,
+        rgba(255, 255, 255, 0) 42%
+    );
+    background: -o-linear-gradient(
+        left,
+        var(--spinner-color) 10%,
+        rgba(255, 255, 255, 0) 42%
+    );
+    background: -ms-linear-gradient(
+        left,
+        var(--spinner-color) 10%,
+        rgba(255, 255, 255, 0) 42%
+    );
+    background: linear-gradient(
+        to right,
+        var(--spinner-color) 10%,
+        rgba(255, 255, 255, 0) 42%
+    );
+    position: relative;
+    -webkit-animation: spin3 1.4s infinite linear;
+    animation: spin3 1.4s infinite linear;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+}
+.spinner3:before {
+    width: 50%;
+    height: 50%;
+    background: var(--spinner-color);
+    border-radius: 100% 0 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+}
+.spinner3:after {
+    background: var(--bg-color);
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+@-webkit-keyframes spin3 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin3 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

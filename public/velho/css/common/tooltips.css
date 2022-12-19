@@ -1,0 +1,63 @@
+.tooltip-counter {
+    background: white;
+    padding: 3px 6px;
+    font-size: 12px;
+    border-radius: 4px;
+    visibility: hidden;
+    z-index: 99999;
+    color: #888;
+    border: 1px solid #aaa;
+}
+.tooltip-counter > .arrow::before {
+    visibility: hidden;
+    border: 1px solid #aaa;
+}
+.tooltip-counter[data-show] {
+    visibility: visible;
+}
+.tooltip-counter[data-show] > .arrow::before {
+    visibility: visible;
+}
+.tooltip-counter[data-popper-placement^="top"] > .arrow::before {
+    border-left: none;
+    border-top: none;
+}
+.tooltip-counter[data-popper-placement^="bottom"] > .arrow::before {
+    border-right: none;
+    border-bottom: none;
+}
+.tooltip-counter[data-popper-placement^="left"] > .arrow::before {
+    border-left: none;
+    border-bottom: none;
+}
+.tooltip-counter[data-popper-placement^="right"] > .arrow::before {
+    border-right: none;
+    border-top: none;
+}
+.tooltip-counter[data-popper-placement^="top"] > .arrow {
+    bottom: -4px;
+}
+.tooltip-counter[data-popper-placement^="bottom"] > .arrow {
+    top: -4px;
+}
+.tooltip-counter[data-popper-placement^="left"] > .arrow {
+    right: -4px;
+}
+.tooltip-counter[data-popper-placement^="right"] > .arrow {
+    left: -4px;
+}
+.arrow,
+.arrow::before {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: inherit;
+}
+.arrow {
+    visibility: hidden;
+}
+.arrow::before {
+    visibility: visible;
+    content: "";
+    transform: rotate(45deg);
+}
