@@ -45,7 +45,7 @@ class DataReturn {
         $function = new Functions();
 
         if (!is_null($tables)) {
-
+            //FASE DE TESTES - RELACIONAMENTO AUTOMATIZADO
             //se exitir o array de tabelas para filtrar os relacionamentos.
             //Caso não existe passa para proxima instrução
             //$tablesRela = $function->separatorTable($tables, $request);
@@ -74,7 +74,7 @@ class DataReturn {
             //criadas na camada de modelo da tabela principal.
             foreach ($tablesRela as $tab => $val) {
                 if ($tab !== $model->getTable()) {
-dd($tablesRela, $tab, $val, $arraytables);
+                    //dd($tablesRela, $tab, $val, $arraytables);
                     $ret[__LINE__ . ' - ' . $tab] = 'ENTROU NO FOREACH';
                     //separa os dados da tabela e request da tabela principal
                     //executa somente as tabelas relacionadas.
@@ -148,6 +148,7 @@ dd($tablesRela, $tab, $val, $arraytables);
             }
             return $ret;
         } else {
+            //PRONTO PARA USO EM PRODUÇÃO
             //sem relacionamento segue normal
             $data = Functions::decryptDataIndex($request, $module, $model);
             $data = DataReturn::readFile($model->getTable() . Crypt::decrypt($id), $data);
